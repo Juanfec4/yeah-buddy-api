@@ -8,7 +8,6 @@ The API Has a **rate limit of 10 requests every 1 minute**, this is in place to 
 
 ## #TODO
 
-- Add CORS
 - Deploy
 
 ## Tech Stack
@@ -30,6 +29,7 @@ npm run dev
 To run this project, you will need to add the following environment variables to your .env file
 
 `DB_URI`=' YOUR DB <mongodb> '
+`FRONT_END_ORIGIN`=' YOUR FRONT-END ORIGIN'
 
 ## API Reference
 

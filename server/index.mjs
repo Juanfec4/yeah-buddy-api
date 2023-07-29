@@ -4,6 +4,9 @@ import express from "express";
 import ip from "ip";
 import mongoose from "mongoose";
 
+//CORS
+import CORS from "./middleware/corsConfig.mjs";
+
 //Config
 import connectDB from "./config/dbConnection.mjs";
 
@@ -22,6 +25,7 @@ const PORT = 3001;
 connectDB();
 
 //Middleware
+app.use(CORS);
 app.use(express.json());
 app.use("/", logger);
 app.use("/api", rateLimiter);
