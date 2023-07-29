@@ -38,7 +38,7 @@ To run this project, you will need to add the following environment variables to
 #### Get all exercises
 
 ```http
-  GET /exercises
+  GET /api/exercises
 ```
 
 | Parameter | Type     | Description                |
@@ -48,7 +48,7 @@ To run this project, you will need to add the following environment variables to
 #### Get exercise
 
 ```http
-  GET /exercises/${id}
+  GET /api/exercises/${id}
 ```
 
 | Parameter | Type     | Description                           |
@@ -59,7 +59,7 @@ To run this project, you will need to add the following environment variables to
 #### Create exercise
 
 ```http
-  POST /exercises
+  POST /api/exercises
 ```
 
 | Parameter  | Type     | Description                      |
@@ -74,7 +74,7 @@ To run this project, you will need to add the following environment variables to
 #### Update exercise
 
 ```http
-  PATCH /exercises/${id}
+  PATCH /api/exercises/${id}
 ```
 
 | Parameter  | Type     | Description                             |
@@ -92,7 +92,7 @@ To run this project, you will need to add the following environment variables to
 #### Delete exercise
 
 ```http
-  DELETE /exercises/${id}
+  DELETE /api/exercises/${id}
 ```
 
 | Parameter | Type     | Description                             |
@@ -105,7 +105,7 @@ To run this project, you will need to add the following environment variables to
 #### Get all plans
 
 ```http
-  GET /plans
+  GET /api/plans
 ```
 
 | Parameter | Type     | Description                |
@@ -115,7 +115,7 @@ To run this project, you will need to add the following environment variables to
 #### Get plan
 
 ```http
-  GET /plans/${id}
+  GET /api/plans/${id}
 ```
 
 | Parameter | Type     | Description                       |
@@ -126,7 +126,7 @@ To run this project, you will need to add the following environment variables to
 #### Create plan
 
 ```http
-  POST /plans
+  POST /api/plans
 ```
 
 | Parameter   | Type     | Description                |
@@ -138,7 +138,7 @@ To run this project, you will need to add the following environment variables to
 #### Update plan
 
 ```http
-  PATCH /plans/${id}
+  PATCH /api/plans/${id}
 ```
 
 | Parameter   | Type     | Description                             |
@@ -153,7 +153,7 @@ To run this project, you will need to add the following environment variables to
 #### Delete plan
 
 ```http
-  DELETE /plans/${id}
+  DELETE /api/plans/${id}
 ```
 
 | Parameter | Type     | Description                         |
