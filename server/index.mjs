@@ -13,10 +13,13 @@ import connectDB from "./config/dbConnection.mjs";
 //Middleware
 import logger from "./middleware/morganConfig.mjs";
 import rateLimiter from "./middleware/rateLimitConfig.mjs";
+import errorHandler from "./middleware/errorHandler.mjs";
 
 //Routers
 import planRouter from "./routes/plans.mjs";
 import exerciseRouter from "./routes/exercises.mjs";
+import categoryRouter from "./routes/categories.mjs";
+import bodyPartRouter from "./routes/bodyParts.mjs";
 
 const app = express();
 const PORT = 3001;
@@ -33,6 +36,11 @@ app.use("/api", rateLimiter);
 //Routes
 app.use("/api/plans", planRouter);
 app.use("/api/exercises", exerciseRouter);
+app.use("/api/categories", categoryRouter);
+app.use("/api/body-parts", bodyPartRouter);
+
+//404 & 500
+app.use(errorHandler);
 
 //Only listen for requests once DB is connected successfully
 mongoose.connection.once("open", () => {
