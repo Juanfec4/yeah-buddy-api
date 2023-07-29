@@ -2,6 +2,10 @@
 
 This project is an API made for another front-end project. The main goal is to create a server that can update a mongoDB database and serve as a middleman for my react front-end site.
 
+#### Disclaimer
+
+The API Has a rate limit of 10 requests every 1 minute, this is in place to avoid a server overload as I am hosting it on a free plan.
+
 ## #TODO
 
 - Add CORS
