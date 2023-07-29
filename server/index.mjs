@@ -9,6 +9,7 @@ import connectDB from "./config/dbConnection.mjs";
 
 //Middleware
 import logger from "./middleware/morganConfig.mjs";
+import rateLimiter from "./middleware/rateLimitConfig.mjs";
 
 //Routers
 import planRouter from "./routes/plans.mjs";
@@ -23,10 +24,11 @@ connectDB();
 //Middleware
 app.use(express.json());
 app.use("/", logger);
+app.use("/api", rateLimiter);
 
 //Routes
-app.use("/plans", planRouter);
-app.use("/exercises", exerciseRouter);
+app.use("/api/plans", planRouter);
+app.use("/api/exercises", exerciseRouter);
 
 //Only listen for requests once DB is connected successfully
 mongoose.connection.once("open", () => {

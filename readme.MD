@@ -5,8 +5,6 @@ This project is an API made for another front-end project. The main goal is to c
 ## #TODO
 
 - Add CORS
-- Add users
-- Add api-keys
 - Deploy
 
 ## Tech Stack
