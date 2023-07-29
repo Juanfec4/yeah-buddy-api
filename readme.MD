@@ -4,7 +4,7 @@ This project is an API made for another front-end project. The main goal is to c
 
 #### Disclaimer
 
-The API Has a rate limit of 10 requests every 1 minute, this is in place to avoid a server overload as I am hosting it on a free plan.
+The API Has a **rate limit of 10 requests every 1 minute**, this is in place to avoid a server overload as I am hosting it on a free plan.
 
 ## #TODO
 
