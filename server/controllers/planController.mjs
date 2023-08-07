@@ -2,7 +2,7 @@ import Plan from "../schemas/Plan.mjs";
 
 //Create new Plan in DB
 const handleNewPlan = async (request, response) => {
-  const { name } = request.body;
+  const { name, exercises } = request.body;
   //Missing Required Fields
   if (!name) {
     return response.status(400).json({ message: "Missing name." });
@@ -11,10 +11,9 @@ const handleNewPlan = async (request, response) => {
   try {
     const result = await Plan.create({
       name,
+      exercises,
     });
-    return response
-      .status(201)
-      .json({ success: `New Plan: ${name} created!`, result });
+    return response.status(201).json({ success: `New Plan: ${name} created!`, result });
   } catch (error) {
     return response.status(500).json({ message: error.message });
   }
@@ -36,9 +35,7 @@ const handleGetPlan = async (request, response, id) => {
     const plan = await Plan.findById(id);
     //For deleted items
     if (!plan) {
-      return response
-        .status(404)
-        .json({ message: `No plan by id ${id} has found.` });
+      return response.status(404).json({ message: `No plan by id ${id} has found.` });
     }
     return response.status(302).json(plan);
     //No exercise watching ID in DB found

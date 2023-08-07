@@ -1,7 +1,7 @@
 import rateLimit from "express-rate-limit";
 
 const TIME_MINUTES = 1;
-const MAX_REQUESTS = 50;
+const MAX_REQUESTS = 100;
 
 const middleware = rateLimit({
   windowMs: TIME_MINUTES * 60 * 1000,
