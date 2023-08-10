@@ -16,6 +16,10 @@ The API Has a **rate limit of 10 requests every 1 minute**, this is in place to 
 
 **Tools:** Morgan, Nodemon, Dotenv
 
+## Live Site (API)
+
+https://yeah-buddy-api.onrender.com
+
 ## Initialization
 
 To start the development server.
