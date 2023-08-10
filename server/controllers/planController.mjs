@@ -37,7 +37,7 @@ const handleGetPlan = async (request, response, id) => {
     if (!plan) {
       return response.status(404).json({ message: `No plan by id ${id} has found.` });
     }
-    return response.status(302).json(plan);
+    return response.status(200).json(plan);
     //No exercise watching ID in DB found
   } catch (error) {
     console.error(error);
