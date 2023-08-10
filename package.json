@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.mjs",
   "scripts": {
+    "build": "npm install cors dotenv express express-rate-limit ip mongodb mongoose morgan",
+    "start": "node ./server/index.mjs",
     "dev": "nodemon ./server/index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
